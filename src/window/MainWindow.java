@@ -10,10 +10,13 @@ import java.awt.FlowLayout;
 import javax.swing.JPanel;
 import javax.swing.JSplitPane;
 
+import body.Reagent;
 import body.ReagentList;
 
 import java.awt.Dimension;
 import javax.swing.JScrollPane;
+import java.awt.GridLayout;
+import java.awt.Font;
 
 public class MainWindow extends JFrame
 {
@@ -23,44 +26,35 @@ public class MainWindow extends JFrame
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setVisible(true);
 		this.setSize(850, 600);
-		
 		getContentPane().setLayout(new BorderLayout(0, 0));
 		
-		JSplitPane splitPane = new JSplitPane();
-		getContentPane().add(splitPane, BorderLayout.NORTH);
+		JPanel panel = new JPanel();
+		getContentPane().add(panel, BorderLayout.NORTH);
+		panel.setLayout(new GridLayout(1, 4, 0, 0));
 		
-		JButton button = new JButton("\u6DFB\u52A0\u836F\u54C1");
-		button.setSize(new Dimension(200, 30));
-		button.setPreferredSize(new Dimension(200, 30));
-		button.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		splitPane.setLeftComponent(button);
+		JButton add_reagent = new JButton("\u6DFB\u52A0\u836F\u54C1");
+		add_reagent.setFont(new Font("Î¢ÈíÑÅºÚ", Font.BOLD, 30));
+		panel.add(add_reagent);
 		
-		JSplitPane splitPane_1 = new JSplitPane();
-		splitPane.setRightComponent(splitPane_1);
+		JButton delete_reagent = new JButton("\u5220\u9664\u836F\u54C1");
+		delete_reagent.setFont(new Font("Î¢ÈíÑÅºÚ", Font.BOLD, 30));
+		panel.add(delete_reagent);
 		
-		JButton button_1 = new JButton("\u5220\u9664\u836F\u54C1");
-		button_1.setPreferredSize(new Dimension(200, 30));
-		splitPane_1.setLeftComponent(button_1);
+		JButton set_reagent = new JButton("\u4FEE\u6539\u836F\u54C1");
+		set_reagent.setFont(new Font("Î¢ÈíÑÅºÚ", Font.BOLD, 30));
+		panel.add(set_reagent);
 		
-		JSplitPane splitPane_2 = new JSplitPane();
-		splitPane_1.setRightComponent(splitPane_2);
-		
-		JButton button_2 = new JButton("\u4FEE\u6539\u836F\u54C1");
-		button_2.setPreferredSize(new Dimension(200, 30));
-		splitPane_2.setLeftComponent(button_2);
-		
-		JButton button_3 = new JButton("\u67E5\u627E\u836F\u54C1");
-		button_3.setPreferredSize(new Dimension(200, 30));
-		splitPane_2.setRightComponent(button_3);
+		JButton find_reagent = new JButton("\u67E5\u8BE2\u836F\u54C1");
+		find_reagent.setFont(new Font("Î¢ÈíÑÅºÚ", Font.BOLD, 30));
+		panel.add(find_reagent);
 		
 		JScrollPane scrollPane = new JScrollPane();
 		getContentPane().add(scrollPane, BorderLayout.CENTER);
 		
 		JList list = new JList(rl.getshortterm());
-		scrollPane.setViewportView(list);
+		scrollPane.setRowHeaderView(list);
+		
+		
 		
 		
 	}

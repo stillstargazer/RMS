@@ -1,7 +1,5 @@
 package body;
 
-import java.awt.CardLayout;
-
 public class Reagent 
 {
 	private String CHIname;//Ò©Æ·Ãû³Æ

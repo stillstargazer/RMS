@@ -17,6 +17,13 @@ import java.awt.Dimension;
 import javax.swing.JScrollPane;
 import java.awt.GridLayout;
 import java.awt.Font;
+import javax.swing.ScrollPaneConstants;
+import javax.swing.JTable;
+import javax.swing.ListModel;
+import javax.swing.JScrollBar;
+import javax.swing.ListSelectionModel;
+import javax.swing.AbstractListModel;
+import javax.swing.DefaultListModel;
 
 public class MainWindow extends JFrame
 {
@@ -49,11 +56,24 @@ public class MainWindow extends JFrame
 		panel.add(find_reagent);
 		
 		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 		getContentPane().add(scrollPane, BorderLayout.CENTER);
 		
-		JList list = new JList(rl.getshortterm());
-		scrollPane.setRowHeaderView(list);
+		JPanel reagentpanel = new JPanel();
+		scrollPane.setViewportView(reagentpanel);
 		
+		DefaultListModel<String> jlm = new DefaultListModel<String>();
+		int rl_length = rl.getlength();
+		for(int i = 0; i < rl_length; i++)
+		{
+			jlm.addElement(rl.getshortterm()[i]);
+		}
+		
+		JList<String> list = new JList<String>();
+		list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+		list.setModel(jlm);
+		reagentpanel.add(list);
+		list.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 25));
 		
 		
 		

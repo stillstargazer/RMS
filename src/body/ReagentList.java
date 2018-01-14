@@ -26,6 +26,7 @@ public class ReagentList
 			temp = br.readLine();
 			r.add(new Reagent(temp));
 		}
+		br.close();
 	}
 
 	public void add(Reagent reagent)
@@ -50,6 +51,7 @@ public class ReagentList
 		out.println(length);
 		for (int i = 0; i < r.size(); i++)
 			out.println(r.get(i).get());
+		out.close();
 	}
 
 	public String[] getshortterm()
@@ -58,7 +60,7 @@ public class ReagentList
 		String string;
 		for (int i = 0; i < length; i++)
 		{
-			string = String.format("%-20s", r.get(i).getCHIname()) + String.format("%-20s", r.get(i).getENGname())
+			string = String.format("%-30s", r.get(i).getCHIname()) + String.format("%-20s", r.get(i).getENGname())
 					+ String.format("%-20s", r.get(i).getCAS())
 					+ String.format("%-5s", String.valueOf(r.get(i).getnumber()))
 					+ String.format("%-5s", String.valueOf(r.get(i).getcabinet()));// 更改字符串显示长度
@@ -67,4 +69,49 @@ public class ReagentList
 		return str;
 	}
 
+	public int getlength()
+	{
+		return length;
+	}
+	
+	private int numofstring(String s)
+	{
+		if (s.equals(""))
+			return 0;
+		byte[] _byte = s.getBytes();
+		return _byte.length;
+	}
+
+	public int findCHIname(String s)
+	{
+		for(int i = 0; i < length; i++)
+		{
+			if(r.get(i).getCHIname().equals(s))
+				return i;
+		}
+		return -1;
+	}
+	
+	public int findENGname(String s)
+	{
+		for(int i = 0; i < length; i++)
+		{
+			if(r.get(i).getENGname().equals(s))
+				return i;
+		}
+		return -1;
+	}
+	
+	public int findCAS(String s)
+	{
+		for(int i = 0; i < length; i++)
+		{
+			if(r.get(i).getCAS().equals(s))
+				return i;
+		}
+		return -1;
+	}
+	
+	
+	
 }

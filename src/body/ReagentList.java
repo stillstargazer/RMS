@@ -16,7 +16,7 @@ public class ReagentList
 	private ArrayList<Reagent> r = new ArrayList<Reagent>();
 	private int length;
 
-	public ReagentList(File f) throws NumberFormatException, IOException
+	public ReagentList(File f) throws NumberFormatException, IOException    //从文件读入，初始化
 	{
 		BufferedReader br = new BufferedReader(new FileReader(f));
 		String temp = br.readLine();
@@ -29,7 +29,7 @@ public class ReagentList
 		br.close();
 	}
 
-	public void add(Reagent reagent)
+	public void add(Reagent reagent)                                        //添加一个reagent
 	{
 		int i;
 		for (i = 0; i < length; i++)
@@ -39,22 +39,22 @@ public class ReagentList
 		length++;
 	}
 
-	public void delete(int i)
+	public void delete(int i)                                               //删除一个reagent
 	{
 		r.remove(i);
 		length--;
 	}
 
-	public void output(File f) throws FileNotFoundException
+	public void output(File f) throws FileNotFoundException                 //输出到文件
 	{
 		PrintStream out = new PrintStream(f);
 		out.println(length);
 		for (int i = 0; i < r.size(); i++)
-			out.println(r.get(i).get());
+			out.println(r.get(i).show());
 		out.close();
 	}
 
-	public String[] getshortterm()
+	public String[] getshortterm()                        //TODO：放在Reagent里，然后直接调用
 	{
 		String[] str = new String[length];
 		String string;
@@ -69,12 +69,12 @@ public class ReagentList
 		return str;
 	}
 
-	public int getlength()
+	public int getlength()                                //取长度
 	{
 		return length;
 	}
 	
-	private int numofstring(String s)
+	private int numofstring(String s)                     //中文字符个数转换
 	{
 		if (s.equals(""))
 			return 0;
@@ -82,7 +82,7 @@ public class ReagentList
 		return _byte.length;
 	}
 
-	public int findCHIname(String s)
+	public int findCHIname(String s)                      //查询中文名称
 	{
 		for(int i = 0; i < length; i++)
 		{
@@ -92,7 +92,7 @@ public class ReagentList
 		return -1;
 	}
 	
-	public int findENGname(String s)
+	public int findENGname(String s)                      //查询英文名称
 	{
 		for(int i = 0; i < length; i++)
 		{
@@ -102,7 +102,7 @@ public class ReagentList
 		return -1;
 	}
 	
-	public int findCAS(String s)
+	public int findCAS(String s)                          //查询CAS
 	{
 		for(int i = 0; i < length; i++)
 		{

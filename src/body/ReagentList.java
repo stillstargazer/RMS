@@ -57,29 +57,14 @@ public class ReagentList
 	public String[] getshortterm()                        //TODO：放在Reagent里，然后直接调用
 	{
 		String[] str = new String[length];
-		String string;
 		for (int i = 0; i < length; i++)
-		{
-			string = String.format("%-30s", r.get(i).getCHIname()) + String.format("%-20s", r.get(i).getENGname())
-					+ String.format("%-20s", r.get(i).getCAS())
-					+ String.format("%-5s", String.valueOf(r.get(i).getnumber()))
-					+ String.format("%-5s", String.valueOf(r.get(i).getcabinet()));// 更改字符串显示长度
-			str[i] = string;
-		}
+			str[i] = r.get(i).getshortterm();
 		return str;
 	}
 
 	public int getlength()                                //取长度
 	{
 		return length;
-	}
-	
-	private int numofstring(String s)                     //中文字符个数转换
-	{
-		if (s.equals(""))
-			return 0;
-		byte[] _byte = s.getBytes();
-		return _byte.length;
 	}
 
 	public int findCHIname(String s)                      //查询中文名称

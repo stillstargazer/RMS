@@ -97,6 +97,9 @@ public class ReagentList
 		return -1;
 	}
 	
-	
+	public Reagent get(int i)
+	{
+		return r.get(i);
+	}
 	
 }

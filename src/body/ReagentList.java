@@ -15,9 +15,11 @@ public class ReagentList
 
 	private ArrayList<Reagent> r = new ArrayList<Reagent>();
 	private int length;
+	private File file;
 
 	public ReagentList(File f) throws NumberFormatException, IOException    //从文件读入，初始化
 	{
+		file=f;
 		BufferedReader br = new BufferedReader(new FileReader(f));
 		String temp = br.readLine();
 		length = Integer.parseInt(temp);
@@ -29,7 +31,7 @@ public class ReagentList
 		br.close();
 	}
 
-	public void add(Reagent reagent)                                        //添加一个reagent
+	public void add(Reagent reagent) throws FileNotFoundException                                        //添加一个reagent
 	{
 		int i;
 		for (i = 0; i < length; i++)
@@ -37,12 +39,14 @@ public class ReagentList
 				break;
 		r.add(i, reagent);
 		length++;
+		output(file);
 	}
 
-	public void delete(int i)                                               //删除一个reagent
+	public void delete(int i) throws FileNotFoundException                                               //删除一个reagent
 	{
 		r.remove(i);
 		length--;
+		output(file);
 	}
 
 	public void output(File f) throws FileNotFoundException                 //输出到文件

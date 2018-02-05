@@ -16,7 +16,6 @@ public class test
 	{
 		File f = new File("./test.txt");
 		ReagentList rl = new ReagentList(f);
-		System.out.println(rl.getshortterm()[0]);
 		MainWindow mw = new MainWindow(rl);
 
 		System.out.println("FINISHED");

@@ -16,12 +16,17 @@ import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.JTableHeader;
 
 import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.GridLayout;
 import java.awt.Font;
 
 import body.ReagentList;
+import window.AdditionWindow;
+import window.EditWindow;
+import window.SearchWindow;
 
 public class MainWindow extends JFrame
 {
@@ -32,6 +37,13 @@ public class MainWindow extends JFrame
 	private JButton delete_reagent;
 	private JButton set_reagent;
 	private JButton find_reagent;
+	
+	private AdditionWindow aw;
+	
+	private Font buttonFont = new Font("微软雅黑", Font.BOLD, 30);
+	private Font tableFont = new Font("微软雅黑", Font.PLAIN, 25);
+	private Font tableHeaderFont = new Font("微软雅黑", Font.PLAIN, 28);
+	
 	
 	class TblModel extends AbstractTableModel implements TableModelListener
 	{
@@ -131,6 +143,7 @@ public class MainWindow extends JFrame
 			}
 		}
 	}
+
 	
 	public MainWindow(ReagentList rl)
 	{
@@ -139,25 +152,70 @@ public class MainWindow extends JFrame
 		this.setSize(1000, 600);
 		getContentPane().setLayout(new BorderLayout(0, 0));
 		
+
+		
 		functionPane = new JPanel();
 		getContentPane().add(functionPane, BorderLayout.NORTH);
 		functionPane.setLayout(new GridLayout(1, 4, 0, 0));
 		
 		add_reagent = new JButton("\u6DFB\u52A0\u836F\u54C1");
-		add_reagent.setFont(new Font("微软雅黑", Font.BOLD, 30));
+		add_reagent.setFont(buttonFont);
 		functionPane.add(add_reagent);
+		add_reagent.addActionListener(new ActionListener()
+		{
+			
+			@Override
+			public void actionPerformed(ActionEvent e)
+			{
+				//System.out.println("hahaha");
+				if(e.getSource() == add_reagent)
+				{
+					
+					aw = new AdditionWindow(rl);
+				}				
+			} 
+			
+		});
 		
 		delete_reagent = new JButton("\u5220\u9664\u836F\u54C1");
-		delete_reagent.setFont(new Font("微软雅黑", Font.BOLD, 30));
+		delete_reagent.setFont(buttonFont);
 		functionPane.add(delete_reagent);
+		delete_reagent.addActionListener(new ActionListener()
+		{
+			
+			@Override
+			public void actionPerformed(ActionEvent e)
+			{
+				//TODO 没有想好应该实现成什么样
+				
+			}
+		});
 		
 		set_reagent = new JButton("\u4FEE\u6539\u836F\u54C1");
-		set_reagent.setFont(new Font("微软雅黑", Font.BOLD, 30));
+		set_reagent.setFont(buttonFont);
 		functionPane.add(set_reagent);
+		set_reagent.addActionListener(new ActionListener()
+		{
+			
+			@Override
+			public void actionPerformed(ActionEvent e)
+			{
+				EditWindow ew = new EditWindow();				
+			}
+		});
 		
 		find_reagent = new JButton("\u67E5\u8BE2\u836F\u54C1");
-		find_reagent.setFont(new Font("微软雅黑", Font.BOLD, 30));
+		find_reagent.setFont(buttonFont);
 		functionPane.add(find_reagent);
+		find_reagent.addActionListener(new ActionListener()
+		{
+			
+			@Override
+			public void actionPerformed(ActionEvent e)
+			{
+				SearchWindow sw = new SearchWindow();			
+			}
+		});
 		
 		TblModel tblmodel = new TblModel(rl);              //表格模型，负责更新reagentTable中的数据
 		tblmodel.addTableModelListener(tblmodel);
@@ -166,7 +224,7 @@ public class MainWindow extends JFrame
 		
 		reagentTable.setShowVerticalLines(false);
 		reagentTable.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-		reagentTable.setFont(new Font("微软雅黑", Font.PLAIN, 25));
+		reagentTable.setFont(tableFont);
 		reagentTable.setRowHeight(40);
 		
 		//悬浮窗
@@ -197,26 +255,14 @@ public class MainWindow extends JFrame
 		JTableHeader reagentPaneHeader = reagentTable.getTableHeader();
 		reagentPaneHeader.setReorderingAllowed(false);
 		reagentPaneHeader.setResizingAllowed(false);
-		reagentPaneHeader.setFont(new Font("微软雅黑", Font.PLAIN, 28));
+		reagentPaneHeader.setFont(tableHeaderFont);
 		
 		
 		this.setVisible(true);
 		
 	}
 
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-
-		
+	
 }
 
 

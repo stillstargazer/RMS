@@ -101,8 +101,8 @@ public class MainWindow extends JFrame
 		// Êý×Ö¾ÓÖÐ
 		DefaultTableCellRenderer reagentTableCellRender = new DefaultTableCellRenderer();
 		reagentTableCellRender.setHorizontalAlignment(JLabel.CENTER);
-		;
-		reagentTable.setDefaultRenderer(Number.class, reagentTableCellRender);
+		reagentTable.setDefaultRenderer(Integer.class, reagentTableCellRender);
+		reagentTable.setDefaultRenderer(Double.class, reagentTableCellRender);
 
 		JScrollPane reagentPane = new JScrollPane(reagentTable);
 		reagentPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
@@ -121,14 +121,11 @@ public class MainWindow extends JFrame
 			@Override
 			public void actionPerformed(ActionEvent e)
 			{
-				// System.out.println("hahaha");
 				if (e.getSource() == add_reagent)
 				{
-
-					aw = new AdditionWindow(rl);
+					aw = new AdditionWindow(rl, reagentTable);
 				}
 			}
-
 		});
 
 		delete_reagent.addActionListener(new ActionListener()
@@ -178,5 +175,5 @@ public class MainWindow extends JFrame
 		this.setVisible(true);
 
 	}
-
+	
 }

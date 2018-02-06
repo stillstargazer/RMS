@@ -7,7 +7,7 @@ public class Reagent
 	private String CAS; // CAS
 	private String purity; // 纯度
 	private String specification; // 规格
-	private int number; // 数量
+	private Double number; // 数量
 	private String manufacturer; // 生产厂家
 	private int date; // 生产日期
 	private int cabinet; // 柜号
@@ -21,9 +21,9 @@ public class Reagent
 		purity = st[3];
 		specification = st[4];
 		if (st[5].equals(""))
-			number = -1;
+			number = -1.0;
 		else
-			number = Integer.parseInt(st[5]);
+			number = Double.parseDouble(st[5]);
 		manufacturer = st[6];
 		if (st[7].equals(""))
 			date = -1;
@@ -35,7 +35,20 @@ public class Reagent
 			cabinet = Integer.parseInt(st[8]);
 	}
 
-	public void editCHIname(String str) // 中文名称setter
+	public Reagent(String cHIname, String eNGname, String cAS, Double num, String pur, String spec, String manu, int dat, int cab)
+	{
+		CHIname = cHIname;
+		ENGname = eNGname;
+		CAS = cAS;
+		number = num;
+		purity = pur;
+		specification = spec;
+		manufacturer = manu;
+		date = dat;
+		cabinet = cab;		
+	}
+	
+ 	public void editCHIname(String str) // 中文名称setter
 	{
 		CHIname = str;
 	}
@@ -60,7 +73,7 @@ public class Reagent
 		specification = str;
 	}
 
-	public void editnumber(int n) // 数量setter
+	public void editnumber(Double n) // 数量setter
 	{
 		number = n;
 	}
@@ -105,7 +118,7 @@ public class Reagent
 		return specification;
 	}
 
-	public int getnumber() // 数量getter
+	public Double getnumber() // 数量getter
 	{
 		return number;
 	}

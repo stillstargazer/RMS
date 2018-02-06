@@ -1,12 +1,10 @@
 package window;
 
 import java.awt.BorderLayout;
-import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 
-import javax.swing.Box;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
@@ -20,13 +18,7 @@ import body.Reagent;
 import body.ReagentList;
 import body.TblModel;
 
-import java.awt.Component;
-import java.awt.Dimension;
 import javax.swing.border.EmptyBorder;
-import javax.swing.border.BevelBorder;
-import javax.swing.border.LineBorder;
-import java.awt.Color;
-import javax.swing.border.EtchedBorder;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -159,7 +151,7 @@ public class AdditionWindow extends JFrame
 				if(errorstr.equals(""))
 				{
 					Reagent r = new Reagent(CHInametextfield.getText(), ENGnametextfield.getText(), CAStextfield.getText(), 
-							Double.parseDouble(numbertextfield.getText()), puritytextfield.getText(), spectextfield.getSelectedItem().toString(), 
+							Integer.parseInt(numbertextfield.getText()), puritytextfield.getText(), spectextfield.getSelectedItem().toString(), 
 							manutextfield.getSelectedItem().toString(), Integer.parseInt(datetextfield.getText()), 
 							Integer.parseInt(cabinettextfield.getSelectedItem().toString()));
 					try
@@ -398,7 +390,7 @@ public class AdditionWindow extends JFrame
 		{
 			try
 			{
-				Double num = Double.parseDouble(numbertextfield.getText());
+				int num = Integer.parseInt(numbertextfield.getText());
 				if(num < 0)
 					errstr.append("数量 不能小于0");
 			}

@@ -37,7 +37,7 @@ public class MainWindow extends JFrame
 	private JPanel functionPane;
 	private JButton add_reagent;
 	private JButton delete_reagent;
-	private JButton edit_reagent;
+	private JButton set_reagent;
 	private JButton find_reagent;
 
 	private AdditionWindow aw;
@@ -65,9 +65,9 @@ public class MainWindow extends JFrame
 		delete_reagent.setFont(buttonFont);
 		functionPane.add(delete_reagent);
 
-		edit_reagent = new JButton("\u4FEE\u6539\u836F\u54C1");
-		edit_reagent.setFont(buttonFont);
-		functionPane.add(edit_reagent);
+		set_reagent = new JButton("\u4FEE\u6539\u836F\u54C1");
+		set_reagent.setFont(buttonFont);
+		functionPane.add(set_reagent);
 
 		find_reagent = new JButton("\u67E5\u8BE2\u836F\u54C1");
 		find_reagent.setFont(buttonFont);
@@ -152,16 +152,13 @@ public class MainWindow extends JFrame
 			}
 		});
 
-		edit_reagent.addActionListener(new ActionListener()
+		set_reagent.addActionListener(new ActionListener()
 		{
 
 			@Override
 			public void actionPerformed(ActionEvent e)
 			{
-				if (e.getSource() == edit_reagent)
-				{
-					EditWindow ew = new EditWindow(rl, reagentTable.getSelectedRow(), reagentTable);
-				}
+				EditWindow ew = new EditWindow();
 			}
 		});
 

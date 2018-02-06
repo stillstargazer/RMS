@@ -35,7 +35,7 @@ public class ReagentList
 	{
 		int i;
 		for (i = 0; i < length; i++)
-			if (r.get(i).getcabinet() >= reagent.getcabinet() + 1)
+			if (r.get(i).getcabinet() == reagent.getcabinet() + 1)
 				break;
 		r.add(i, reagent);
 		length++;

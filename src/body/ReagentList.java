@@ -7,6 +7,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.util.ArrayList;
+import java.util.Set;
+import java.util.TreeSet;
 
 import body.Reagent;
 
@@ -31,15 +33,16 @@ public class ReagentList
 		br.close();
 	}
 
-	public void add(Reagent reagent) throws FileNotFoundException                                        //添加一个reagent
+	public int add(Reagent reagent) throws FileNotFoundException            //添加一个reagent，返回插入的行数
 	{
 		int i;
 		for (i = 0; i < length; i++)
-			if (r.get(i).getcabinet() == reagent.getcabinet() + 1)
+			if (r.get(i).getcabinet() >= reagent.getcabinet() + 1)
 				break;
 		r.add(i, reagent);
 		length++;
 		output(file);
+		return i;
 	}
 
 	public void delete(int i) throws FileNotFoundException                                               //删除一个reagent
@@ -105,5 +108,19 @@ public class ReagentList
 	{
 		return r.get(i);
 	}
+	
+	public String[] getManu()
+	{
+		int n = r.size();
+		Set<String> s = new TreeSet<>();
+		for(int i = 0; i < n; i++)
+		{
+			s.add(r.get(i).getmanufacturer());
+		}
+		
+		return (String[])s.toArray(new String[0]);
+	}
+	
+	
 	
 }

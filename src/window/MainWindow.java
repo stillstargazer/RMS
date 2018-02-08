@@ -3,17 +3,17 @@ package window;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.DefaultCellEditor;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
+import javax.swing.JTextField;
 import javax.swing.ScrollPaneConstants;
-import javax.swing.event.TableModelEvent;
-import javax.swing.event.TableModelListener;
+import javax.swing.ToolTipManager;
 import javax.swing.ListSelectionModel;
-import javax.swing.table.AbstractTableModel;
-import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.JTableHeader;
+import javax.swing.table.TableColumnModel;
 
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
@@ -25,19 +25,24 @@ import java.awt.GridLayout;
 import java.awt.Font;
 
 import body.ReagentList;
+import body.TblCellRenderer;
 import body.TblModel;
 import window.AdditionWindow;
 import window.EditWindow;
 import window.SearchWindow;
+import window.DeleteWindow;
 
 public class MainWindow extends JFrame
 {
 
 	private static final long serialVersionUID = -7467076691460643137L;
+	
+	private JTable reagentTable;
+	
 	private JPanel functionPane;
 	private JButton add_reagent;
 	private JButton delete_reagent;
-	private JButton set_reagent;
+	private JButton edit_reagent;
 	private JButton find_reagent;
 
 	private AdditionWindow aw;
@@ -45,12 +50,15 @@ public class MainWindow extends JFrame
 	private Font buttonFont = new Font("微软雅黑", Font.BOLD, 30);
 	private Font tableFont = new Font("微软雅黑", Font.PLAIN, 25);
 	private Font tableHeaderFont = new Font("微软雅黑", Font.PLAIN, 28);
+	private Font editorFont = new Font("微软雅黑", Font.PLAIN, 25);
 
 	public MainWindow(ReagentList rl)
 	{
 		super("试剂管理系统");
+		setResizable(false);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setSize(1000, 600);
+		this.setBounds(100, 100, 1000, 600);
 		getContentPane().setLayout(new BorderLayout(0, 0));
 
 		functionPane = new JPanel();
@@ -65,9 +73,9 @@ public class MainWindow extends JFrame
 		delete_reagent.setFont(buttonFont);
 		functionPane.add(delete_reagent);
 
-		set_reagent = new JButton("\u4FEE\u6539\u836F\u54C1");
-		set_reagent.setFont(buttonFont);
-		functionPane.add(set_reagent);
+		edit_reagent = new JButton("\u4FEE\u6539\u836F\u54C1");
+		edit_reagent.setFont(buttonFont);
+		functionPane.add(edit_reagent);
 
 		find_reagent = new JButton("\u67E5\u8BE2\u836F\u54C1");
 		find_reagent.setFont(buttonFont);
@@ -76,7 +84,7 @@ public class MainWindow extends JFrame
 		TblModel tblmodel = new TblModel(rl); // 表格模型，负责更新reagentTable中的数据
 		tblmodel.addTableModelListener(tblmodel);
 
-		JTable reagentTable = new JTable(tblmodel);
+		reagentTable = new JTable(tblmodel);
 
 		reagentTable.setShowVerticalLines(false);
 		reagentTable.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
@@ -84,26 +92,40 @@ public class MainWindow extends JFrame
 		reagentTable.setRowHeight(40);
 
 		// 悬浮窗
+		ToolTipManager ttm = ToolTipManager.sharedInstance();
+		ttm.setInitialDelay(300);
+		ttm.setDismissDelay(2500);
+		ttm.setReshowDelay(0);
 		reagentTable.addMouseMotionListener(new MouseAdapter()
 		{
+			
 			public void mouseMoved(MouseEvent e)
 			{
 				// TODO 是只显示完整中文名、英文名，还是显示所有字段？？？
 				int row = reagentTable.rowAtPoint(e.getPoint());
 				int col = reagentTable.columnAtPoint(e.getPoint());
+				reagentTable.setToolTipText(rl.get(row).getCHIname());			
 				if (col == 0)
-				{
-					reagentTable.setToolTipText(rl.get(row).getCHIname());
-				}
+					ttm.setEnabled(true);
+				else
+					ttm.setEnabled(false);
 			}
 		});
 
+		// 编辑时字体
+		JTextField numberfield = new JTextField();
+		numberfield.setFont(editorFont);
+		numberfield.setHorizontalAlignment(JTextField.CENTER);
+		DefaultCellEditor reagentTableCellEditor = new DefaultCellEditor(numberfield);
+		reagentTable.setDefaultEditor(Number.class, reagentTableCellEditor);
+		
 		// 数字居中
-		DefaultTableCellRenderer reagentTableCellRender = new DefaultTableCellRenderer();
+		TblCellRenderer reagentTableCellRender = new TblCellRenderer();
 		reagentTableCellRender.setHorizontalAlignment(JLabel.CENTER);
-		reagentTable.setDefaultRenderer(Integer.class, reagentTableCellRender);
-		reagentTable.setDefaultRenderer(Double.class, reagentTableCellRender);
-
+		reagentTable.setDefaultRenderer(Number.class, reagentTableCellRender);
+		reagentTable.getColumn("数量").setCellRenderer(reagentTableCellRender);
+		
+		// 加入JScrollPane
 		JScrollPane reagentPane = new JScrollPane(reagentTable);
 		reagentPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 		getContentPane().add(reagentPane, BorderLayout.CENTER);
@@ -113,6 +135,15 @@ public class MainWindow extends JFrame
 		reagentPaneHeader.setReorderingAllowed(false);
 		reagentPaneHeader.setResizingAllowed(false);
 		reagentPaneHeader.setFont(tableHeaderFont);
+		
+		// 设置列宽
+		TableColumnModel reagentTableColumn = reagentTable.getColumnModel();
+		reagentTableColumn.getColumn(0).setPreferredWidth(300);
+		reagentTableColumn.getColumn(1).setPreferredWidth(300);
+		reagentTableColumn.getColumn(2).setPreferredWidth(200);
+		reagentTableColumn.getColumn(3).setPreferredWidth(100);
+		reagentTableColumn.getColumn(4).setPreferredWidth(100);
+		
 
 		// ActionListener
 		add_reagent.addActionListener(new ActionListener()
@@ -152,13 +183,24 @@ public class MainWindow extends JFrame
 			}
 		});
 
-		set_reagent.addActionListener(new ActionListener()
+		edit_reagent.addActionListener(new ActionListener()
 		{
 
 			@Override
 			public void actionPerformed(ActionEvent e)
 			{
-				EditWindow ew = new EditWindow();
+				if (e.getSource() == edit_reagent)
+				{
+					int n = reagentTable.getSelectedRow();
+					if(n == -1)
+					{
+						JOptionPane.showMessageDialog(null, "您并没有选中数据！", "错误",JOptionPane.ERROR_MESSAGE);
+					}
+					else
+					{
+						EditWindow ew = new EditWindow(rl, n, reagentTable);
+					}
+				}
 			}
 		});
 
@@ -175,5 +217,5 @@ public class MainWindow extends JFrame
 		this.setVisible(true);
 
 	}
-	
+		
 }

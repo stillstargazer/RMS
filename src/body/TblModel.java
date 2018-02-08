@@ -10,7 +10,7 @@ public class TblModel extends AbstractTableModel implements TableModelListener
 
 	private static final long serialVersionUID = 1L;
 
-	final private String[] columnNames = {"中文名", "英文名", "CAS", "剩余", "柜号"};
+	final private String[] columnNames = {"中文名", "英文名", "CAS", "数量", "柜号"};
 	
 	private Object[][] data;
 	
@@ -61,8 +61,10 @@ public class TblModel extends AbstractTableModel implements TableModelListener
 		return columnNames[col];
 	}
 	
-	public Class getColumnClass(int col)
+	public Class<?> getColumnClass(int col)
 	{
+		if(col == 3)
+			return Integer.class;
 		return getValueAt(0, col).getClass();
 	}
 	
@@ -77,26 +79,37 @@ public class TblModel extends AbstractTableModel implements TableModelListener
 	public void setValueAt(Object value, int row, int col)
 	{
 		if(!isCellEditable(row, col))
-			return ;
-		if(value instanceof Double || value instanceof Integer)
+			return;
+		String s = value.toString();
+		if(s.equals(""))
 		{
-				data[row][col] = value;
-				fireTableCellUpdated(row, col);
+			JOptionPane.showMessageDialog(null, "数量不能为空！", "错误",JOptionPane.ERROR_MESSAGE);
+			return;
 		}
-		else
+		if(s.startsWith("-"))
 		{
-			try
+			JOptionPane.showMessageDialog(null, "数量不能为负！", "错误",JOptionPane.ERROR_MESSAGE);
+			return;
+		}
+		try
+		{
+			Integer.parseInt(s);
+			data[row][col] = value;
+			fireTableCellUpdated(row, col);
+		}
+		catch(NumberFormatException e)
+		{
+			try 
 			{
-				data[row][col] = new Float(value.toString());
-				fireTableCellUpdated(row, col);
-				// TODO: 并没有修改txt中的数据
-			} catch (NumberFormatException e)
+				Double.parseDouble(s);
+				JOptionPane.showMessageDialog(null, "数量不能为小数！", "错误",JOptionPane.ERROR_MESSAGE);
+			}
+			catch (NumberFormatException nfe)
 			{
-				JOptionPane.showMessageDialog(null, "剩余列只接受数字型数据！", "错误",JOptionPane.ERROR_MESSAGE); 
+				JOptionPane.showMessageDialog(null, "数量输入错误！", "错误",JOptionPane.ERROR_MESSAGE);
 			}
 		}
-
-	}
+}
 	
 	public void tableChanged(TableModelEvent e)
 	{

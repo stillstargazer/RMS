@@ -1,12 +1,10 @@
 package window;
 
 import java.awt.BorderLayout;
-import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 
-import javax.swing.Box;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
@@ -20,14 +18,9 @@ import body.Reagent;
 import body.ReagentList;
 import body.TblModel;
 
-import java.awt.Component;
-import java.awt.Dimension;
 import javax.swing.border.EmptyBorder;
-import javax.swing.border.BevelBorder;
-import javax.swing.border.LineBorder;
-import java.awt.Color;
-import javax.swing.border.EtchedBorder;
 import java.awt.Insets;
+import java.awt.Rectangle;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.FileNotFoundException;
@@ -68,7 +61,8 @@ public class AdditionWindow extends JFrame
 		super("添加药品");
 		setResizable(false);
 		this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		this.setSize(1000, 500);
+		this.setSize(1100, 500);
+		this.setBounds(600, 400, 1100, 500);
 		getContentPane().setLayout(new BorderLayout());
 		
 		textPane = new JPanel();
@@ -158,15 +152,40 @@ public class AdditionWindow extends JFrame
 				String errorstr = checkError();
 				if(errorstr.equals(""))
 				{
+					//纯度加后缀
+					String purStr = puritytextfield.getText();
+					if(!purStr.endsWith("%"))
+					{
+						try
+						{
+							Double.parseDouble(purStr);
+							purStr += "%";
+						} 
+						catch (NumberFormatException nfe)
+						{
+							
+						}
+					}
+					
+					//规格加后缀，默认为g
+					String specStr = spectextfield.getSelectedItem().toString();
+					if(!(specStr.endsWith("g") || specStr.endsWith("ml")))
+						specStr += "g";
+					
 					Reagent r = new Reagent(CHInametextfield.getText(), ENGnametextfield.getText(), CAStextfield.getText(), 
-							Double.parseDouble(numbertextfield.getText()), puritytextfield.getText(), spectextfield.getSelectedItem().toString(), 
+							Integer.parseInt(numbertextfield.getText()), purStr, specStr, 
 							manutextfield.getSelectedItem().toString(), Integer.parseInt(datetextfield.getText()), 
 							Integer.parseInt(cabinettextfield.getSelectedItem().toString()));
 					try
 					{
-						rl.add(r);
+						int n = rl.add(r);
 						((TblModel)reagentTable.getModel()).update(rl);
 						((TblModel)reagentTable.getModel()).fireTableDataChanged();
+						reagentTable.setRowSelectionInterval(n, n);
+						int len = reagentTable.getModel().getRowCount();
+						n = (n <= len - 7) ? (n + 6) : (len - 1);
+						Rectangle rect = reagentTable.getCellRect(n, 0, true);
+						reagentTable.scrollRectToVisible(rect);
 						dispose();
 					} catch (FileNotFoundException e1)
 					{
@@ -370,10 +389,11 @@ public class AdditionWindow extends JFrame
 	
 	private void setManuContents(JComboBox<String> manu, ReagentList rl)
 	{
-		int len = rl.getlength();
+		String[] str = rl.getManu();
+		int len = str.length;
 		for(int i = 0;  i < len; i++)
 		{
-			manu.addItem(rl.get(i).getmanufacturer());
+			manu.addItem(str[i]);
 		}
 	}
 
@@ -398,12 +418,22 @@ public class AdditionWindow extends JFrame
 		{
 			try
 			{
-				Double num = Double.parseDouble(numbertextfield.getText());
-				if(num < 0)
-					errstr.append("数量 不能小于0");
+				int num = Integer.parseInt(numbertextfield.getText());
+				if(num <= 0)
+					errstr.append("数量不能小于0\n");
 			}
-			catch (NumberFormatException e) {
-				errstr.append("数量不为小数\n");
+			catch (NumberFormatException e)
+			{
+				try
+				{
+					Double d = Double.parseDouble(numbertextfield.getText());
+					if(d <= 0.0)
+						errstr.append("数量不能小于0\n");
+				}
+				catch (NumberFormatException nfe)
+				{
+					errstr.append("数量必须为数字\n");
+				}
 			}
 		}
 		if(puritytextfield.getText().equals(""))
@@ -414,6 +444,27 @@ public class AdditionWindow extends JFrame
 			errstr.append("厂商不能为空\n");
 		if(datetextfield.getText().equals(""))
 			errstr.append("生产日期不能为空\n");
+		else
+		{
+			try
+			{
+				int dt = Integer.parseInt(datetextfield.getText());
+				if(dt < 0)
+					errstr.append("生产日期不能小于0\n");
+			}
+			catch (NumberFormatException e)
+			{
+				try
+				{
+					Double d = Double.parseDouble(numbertextfield.getText());
+					errstr.append("生产日期不能为小数\n");
+				}
+				catch (NumberFormatException nfe)
+				{
+					errstr.append("生产日期必须为数字\n");
+				}
+			}
+		}
 		if(cabinettextfield.getSelectedItem().equals(""))
 			errstr.append("柜号不能为空");
 		

@@ -10,7 +10,7 @@ public class Reagent
 	private int number; // 数量
 	private String manufacturer; // 生产厂家
 	private int date; // 生产日期
-	private int cabinet; // 柜号
+	private String cabinet; // 柜号
 
 	public Reagent(String str) // 构造函数
 	{
@@ -29,13 +29,10 @@ public class Reagent
 			date = -1;
 		else
 			date = Integer.parseInt(st[7]);
-		if (st[8].equals(""))
-			cabinet = -1;
-		else
-			cabinet = Integer.parseInt(st[8]);
+		cabinet = st[8];
 	}
 
-	public Reagent(String cHIname, String eNGname, String cAS, int num, String pur, String spec, String manu, int dat, int cab)
+	public Reagent(String cHIname, String eNGname, String cAS, int num, String pur, String spec, String manu, int dat, String cab)
 	{
 		CHIname = cHIname;
 		ENGname = eNGname;
@@ -88,7 +85,7 @@ public class Reagent
 		date = d;
 	}
 
-	public void editcabinet(int n) // 柜号setter
+	public void editcabinet(String n) // 柜号setter
 	{
 		cabinet = n;
 	}
@@ -133,7 +130,7 @@ public class Reagent
 		return date;
 	}
 
-	public int getcabinet() // 柜号getter
+	public String getcabinet() // 柜号getter
 	{
 		return cabinet;
 	}

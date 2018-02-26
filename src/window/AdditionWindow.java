@@ -49,7 +49,7 @@ public class AdditionWindow extends JFrame
 	private JTextField numbertextfield;
 	private JComboBox<String> manutextfield;
 	private JTextField datetextfield;
-	private JComboBox<Integer> cabinettextfield;
+	private JComboBox<String> cabinettextfield;
 	
 	private Font labelFont = new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 22);
 	private Font textFieldFont = new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 20);
@@ -130,7 +130,7 @@ public class AdditionWindow extends JFrame
 		setLBTFProperties(datelabel, datetextfield);
 		
 		cabinetlabel = new JLabel("¹ñºÅ(Group)");
-		cabinettextfield = new JComboBox<Integer>();
+		cabinettextfield = new JComboBox<String>();
 		setCabinetContents(cabinettextfield);
 		cabinettextfield.setToolTipText("Must have");
 		cabinetlabel.setDisplayedMnemonic('g');             //¿ì½Ý¼ü alt + g
@@ -175,7 +175,7 @@ public class AdditionWindow extends JFrame
 					Reagent r = new Reagent(CHInametextfield.getText(), ENGnametextfield.getText(), CAStextfield.getText(), 
 							Integer.parseInt(numbertextfield.getText()), purStr, specStr, 
 							manutextfield.getSelectedItem().toString(), Integer.parseInt(datetextfield.getText()), 
-							Integer.parseInt(cabinettextfield.getSelectedItem().toString()));
+							cabinettextfield.getSelectedItem().toString());
 					try
 					{
 						int n = rl.add(r);
@@ -397,10 +397,12 @@ public class AdditionWindow extends JFrame
 		}
 	}
 
-	private void setCabinetContents(JComboBox<Integer> cab)
+	private void setCabinetContents(JComboBox<String> cab)
 	{
 		for(int i = 1; i < 13; i++)
-			cab.addItem(i);
+			cab.addItem(Integer.toString(i));
+		cab.addItem("³éÌë");
+		cab.addItem("±ùÏä");
 	}
 	
 	private String checkError()

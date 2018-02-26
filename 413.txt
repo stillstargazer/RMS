@@ -1,46 +1,421 @@
-45
-无水甲醇			AR	500ml	1	北京化工厂	20170725	8
-甲醇			AR	500ml	1	北京化工厂	20170322	8
-无水乙醇			AR	500ml	1	北京化工厂	20170801	8
-乙二醇			AR	500ml	1	北京化工厂	20170110	8
-正丙醇			AR	500ml	3	北京现代东方	20150403	8
-异丙醇			AR	500ml	2	北京化工厂	20170716	8
-丙三醇			AR	500ml	2	Alfa Aesar	20150920	8
-丙三醇			20%	500ml	1		-1	8
-正丁醇			AR	500ml	1	北京现代东方	20160705	8
-1，4-丁二醇			AR	500ml	1	国药	-1	8
-正戊醇			AR	500ml	1	北京现代东方	20150417	8
-一缩二乙二醇			AR	500ml	1	国药	-1	8
-正己醇			AR	500ml	1	北京现代东方	20120516	8
-1，5-戊二醇			98%	25	1	北京百灵威科技有限公司	-1	8
-1，2-戊二醇			98%	25ml	1	梯希爱化成工业有限公司	-1	8
-糠醇			98	100	1	百灵威	-1	8
-四氢糠醇				250	1	百灵威	-1	8
-无水甲醇			AR	500ml	1	北京化工厂	20170725	8
-苯甲醇			99	1000	1	alfa Aesar	-1	9
-2-甲基呋喃			99	25	1	百灵威	-1	9
-2-糠醛					-1	Accu Standard	-1	9
-四氢糠醇			99	25	-1	damas-beta	-1	9
-无水甲醇			AR	500ml	1	北京化工厂	20170725	8
-甲醇			AR	500ml	1	北京化工厂	20170322	8
-无水乙醇			AR	500ml	1	北京化工厂	20170801	8
-乙二醇			AR	500ml	1	北京化工厂	20170110	8
-正丙醇			AR	500ml	3	北京现代东方	20150403	8
-异丙醇			AR	500ml	2	北京化工厂	20170716	8
-丙三醇			AR	500ml	2	Alfa Aesar	20150920	8
-丙三醇			20%	500ml	1		-1	8
-正丁醇			AR	500ml	1	北京现代东方	20160705	8
-1，4-丁二醇			AR	500ml	1	国药	-1	8
-正戊醇			AR	500ml	1	北京现代东方	20150417	8
-一缩二乙二醇			AR	500ml	1	国药	-1	8
-正己醇			AR	500ml	1	北京现代东方	20120516	8
-1，5-戊二醇			98%	25	1	北京百灵威科技有限公司	-1	8
-1，2-戊二醇			98%	25ml	1	梯希爱化成工业有限公司	-1	8
-糠醇			98	100	1	百灵威	-1	8
-四氢糠醇				250	1	百灵威	-1	8
-无水甲醇			AR	500ml	1	北京化工厂	20170725	8
-苯甲醇			99	1000	1	alfa Aesar	-1	9
-2-甲基呋喃			99	25	1	百灵威	-1	9
-2-糠醛					-1	Accu Standard	-1	9
-丁酸甲酯			99	25	-1	梯希爱化成工业有限公司	-1	9
-四氢糠醇			99	25	-1	damas-beta	-1	9
+274
+油胺	oleylamine	112-90-3	80-90	100ml	2	Acros organics	20150305	1
+氢氧化四丙基胺	tetrapropylammonium hydroxide	4499-86-9	25%	100g	1	Accela	20130725	1
+三辛基膦	Tri-n-octylphosphine	4731-53-7	90%	25ml	1	Alfa Aesar	20140408	1
+三辛基氧膦	Trioctylphosphine oxide	78-50-2	98%	25g	1	Alfa Aesar	20140713	1
+醋酸锌二水合物	Zinc acetate dihydrate	5970-45-6	99%	100g	1	伊诺凯	20141201	1
+1-甲基咪唑	1-methyl imidazole	616-47-7	99%	100g	2	Alfa Aesar	20140919	1
+四乙氧基硅烷	Tetraethyl orthosilicate	78-10-4	99.90%	100g	1	Alfa Aesar	20141107	1
+亚二甲苯基二胺	m-Xylylenediamine	1477-55-0	98%	500g	1	TCI	20140808	1
+三乙胺	Triethylamine	121-44-8	99%	250ml	1	Alfa Aesar	20161231	1
+N,N-二甲基甲酰胺	N,N-Dimethyl formamide	68-12-2	AR	500ml	1	北京化工厂	20170410	1
+甲醇钠	Sodium methanolate	124-41-4	30%	500ml	1	Alfa Aesar	20140501	1
+2-甲基四氢呋喃	2-Methyl tetrahydrofuran	96-47-9	99%	100ml	1	MACKLIN	20130913	1
+四氢呋喃	Tetrahydrofuran	109-99-9	AR	500ml	2	现代东方(北京)	20140710	1
+乙腈	Acetonitrile	75-05-8	99.90%	500ml	1	北京化工厂	20140702	1
+异辛烷	2,2,4-Trimethylpentane	540-84-1	AR	500ml	2	天津市永大化学	20140904	2
+正辛烷	Octane	111-65-9	AR	500ml	1	现代东方(北京)	20140327	2
+正庚烷	Heptane	142-82-5	AR	500ml	2	北京化工厂	20111221	2
+甲苯	Toluene	108-88-3	99.50%	500ml	2	现代东方(北京)	20131104	2
+正己烷	Hexane	110-54-3	AR	500ml	1	北京化工厂	20170420	2
+环己烷	Cyclohexane	110-82-7	99.50%	500ml	2	京纯试剂	20131030	2
+苯	Benzene	71-43-2	AR	500ml	2	北京化工厂	20120103	2
+1-十八烯	1-Octadecene	112-88-9	90%	250ml	1	Alfa Aesar	20130729	2
+1,2-二氯乙烷	1,2-Dichloroethane	107-06-2	AR	500ml	2	北京化工厂	20160708	2
+二氯甲烷	Dichloromethane	75-09-2	AR	500ml	2	现代东方(北京)	20110624	2
+三氯甲烷	Chloroform	67-66-3	AR	500ml	1	北京化工厂	20120502	2
+苯胺	Aniline	62-53-3	99.50%	2.5l	1	J&K	20150430	3
+十八胺	Octadecanamine	124-30-1	90%	500g	1	J&K	20161221	3
+间苯二甲腈	1,3-Dicyanobenzene	626-17-5	98%	500g	2	J&K	20131205	3
+四正丙基溴化铵	Tetrapropylammonium bromide	1941-30-6	98%	500g	1	Alfa	20150504	3
+异丙醇铝	Aluminium isopropoxide	555-31-7	98%	1000g	1	Alfa	20130916	3
+棕榈酸	Palmitic acid	57-10-3	95%	500g	1	Alfa	20150203	3
+EDTA	EDTA	60-00-4	99%	250g	1	Alfa	20150411	3
+硬脂酸	Stearic acid	57-11-4	70%	1000g	1	Alfa	20130507	3
+甲基纤维素	Methyl cellulose	9004-67-5	400cps	1000g	1	Alfa	20130507	3
+四丙基氢氧化铵	Tetrapropylammonium hydroxide	4499-86-9	25%	500g	1	Innochem	20130210	4
+尿素	Urea	57-13-6	99%	500g	1	Alfa Aesar	20140112	4
+无水硝酸镍	Nickel Nitrate	14216-75-2	99%	500g	1	Acros organics	20130511	4
+硝酸铵	Ammonium nitrate	6484-52-2	99%	1000g	1	Acros organics	20131021	4
+四乙基硅烷	Tetraethylsilane	631-36-7	98%	1000ml	1	Acros organics	20160715	4
+胶状二氧化硅	Silicon dioxide	14808-60-7	40%	1000ml	1	Aldrich	20160806	4
+H-ZSM-5	H-ZSM-5	68989-22-0	Si/Al=70	500g	1	Nankai	20130904	4
+H-ZSM-5	H-ZSM-5	68989-22-0	Si/Al=50	500g	1	Nankai	20131222	4
+石英砂	Silicon dioxide	112945-52-5	AR	500g	2	国药	20150427	4
+西曲氯铵	N-Hexadecyltrimethylammonium chloride	112-02-7	99%	25g	2	Damas-Beta	20140317	4
+氢氧化四甲铵	Tetramethylammonium hydroxide	75-59-2	25%	50g	2	Alfa Aesar	20161216	4
+仲丁醇铝	Aluminium tri-sec-butoxide	2269-22-9	95%	100g	1	Alfa Aesar	20130808	4
+吗啉	Morpholine	110-91-8	90%	100g	1	Alfa Aesar	20130825	4
+4-（1-环己烯-1-yl）吗啉	N-(1-Cyclohexen-1-yl)morpholine	670-80-4	98%	25g	1	Alfa Aesar	20160729	4
+钛酸四异丙酯	Titanium tetraisopropanolate	546-68-9	95%	100g	1	Alfa Aesar	20161214	4
+氧化铵钒	Ammonium metavanadate	7803-55-6	99%	50g	1	Alfa Aesar	20150330	4
+八水氯化氧锆	Zirconyl chloride octahydrate	13520-92-8	98%	100g	1	Alfa Aesar	20150621	4
+氢氧化铈	Cerium tetrahydroxide	12014-56-1	98%	100g	1	Alfa Aesar	20160907	4
+水合草酸铌（V）	Columbium oxalate	21348-59-4	98%	100g	1	Alfa Aesar	20161028	4
+间苯二腈	1,3-Dicyanobenzene	626-17-5	98%	25g	1	TCI	20130911	4
+草酸铌酸铵	Ammonium niobate oxalate	168547-43-1	99.99%	100g	1	Aldrich	20160407	4
+1，3-二甲基咪唑甲基亚磷酸盐	-1	-1	98%	500g	1	中国林州科能	20130818	4
+氧化铌介孔分子筛	Niobium oxide	1313-96-8	Null	1g	2	Alfa Aesar	20140408	4
+2.5水合硝酸铜	Cupric nitrate_2.5hydrate	19004-19-4	98%	250g	1	Alfa Aesar	20141201	4
+多库脂钠	Dioctyl sulfosuccinate sodium salt	577-11-7	Null	1kg	1		20140925	5
+氧化铝,催化载体，高表面积	Aluminum oxide, high surface area	1344-28-1	96%	1kg	1	阿法埃莎	20130512	5
+活性氧化铝	Aluminum oxide, activated	1344-28-1	Null	1kg	1	国药集团	20130808	5
+氧化铝，20%水胶态分散体	Aluminum oxide, 20% in H2O colloidal dispersion	1344-28-1	Null	1kg	1	阿法埃莎	20130426	5
+氧化铝,催化载体，低表面积	Aluminum oxide, low surface area	1344-28-1	Null	250g	1	阿法埃莎	20130501	5
+碳化硅粉末，精细，320砂砾状	Silicon carbide, fine	409-21-2	Null	500g	1	阿法埃莎	20160630	5
+碳化硅粉末，中等，120粒	Silicon carbide, median	409-21-2	Null	500g	1	阿法埃莎	20150321	5
+MCM-41	MCM-41	-1	Null	50g	2	先丰纳米	20170128	5
+ZSM-5，0.7微米	ZSM-5, 0.7um	-1	Null	100g	1	先丰纳米	20150104	5
+ZSM-5，2.5微米	ZSM-5, 2.5um	-1	Null	100g	1	先丰纳米	20170202	5
+SBA-15,7-9nm	SBA-15, 7-9nm	-1	Null	10g	1	先丰纳米	20151023	5
+石英砂	Silicon dioxide	112945-52-5	99.80%	0	2	国药集团	20160427	11
+活性碳，2mm更小	Activated carbon, <2mm	7440-44-0	Null	250g	1	阿法埃莎	20140721	11
+活性炭，-20-40mesh	Activated carbon, -20-40mesh	7440-44-0	Null	500g	1	阿法埃莎	20150114	11
+氧化硅，催化剂载体,高比表面积，3.18nm	Silicon dioxide, high surface area	112945-52-5	Null	500g	1	阿法埃莎	20140218	11
+氧化硅，催化剂载体,高比表面积	Silicon dioxide, high surface area	112945-52-5	Null	500g	1	阿法埃莎	20160408	11
+Silica gel 60,0.060-0.2nm	Silica gel 60,0.060-0.2nm	112945-52-5	Null	250g	1	阿法埃莎	20160411	11
+Silicon(IV)oxide,50% in H2O colloidal dispersion	Silicon dioxide,50% in H2O colloidal dispersion	112945-52-5	Null	1kg	1	阿法埃莎	20160730	11
+Silicon(IV)oxide amorphous fumed,S.A.	Silicon dioxide amorphous fumed,S.A.	112945-52-5	Null	50g	1	阿法埃莎	20150928	11
+氧化硅	Silicon dioxide	112945-52-5	99%	500g	2	西陇化工	20160917	11
+氧化镁	Magnesium oxide	1309-48-4	98%	500g	1	sigma	20170210	11
+硫酸铜	Copper sulfate	7758-98-7	分析纯	500	1	北京化工厂	20120103	6
+四水合乙酸钴	Cobalt acetate tetrahydrate	6147-53-1	99	100	1	北京百灵威科技有限公司	20140919	6
+硝酸镍1六水合物	Nickel nitrate hexahydrate	13478-00-7	98	100	1	Alfa Aesar	20161015	6
+氯化镍2六水合物	Nickel chloride hexahydrate	7791-20-0	99.3	500	1	Alfa Aesar	20150328	6
+硝酸镍2六水合物	Nickel nitrate hexahydrate	13478-00-7	98	100	1	Alfa Aesar	20141020	6
+硝酸镁	Magnesium nitrate	10377-60-3	99	500	1	天津市大茂化学试剂厂	20121114	6
+无水氯化锌	Zinc chloride	7646-85-7	98	100	1	Alfa Aesar	20160403	6
+氯化镁	Magnesium chloride	7786-30-3	分析纯	500	1	天津市永大化学试剂有限公司	20140206	6
+三水碳酸镁	Magnesium carbonate trihydrate	14457-83-1	Null	500	1	-1	20150210	6
+三氯化铁2六水合物	Ferric chloride hexahydrate	10025-77-1	Null	500	1	Alfa Aesar	20160604	6
+硝酸铁3九水合物	Ferric nitrate nonahydrate	7782-61-8	98	100	1	Alfa Aesar	20141202	6
+硝酸铈3六水合物	Cerium nitrate hexahydrate	10294-41-4	99.5	100	1	Alfa Aesar	20160327	6
+硝酸铬3九水合物	Chromium nitrate nonahydrate	7789-02-8	99	250	1	Alfa Aesar	20160316	6
+氧化锑	Antimony pentoxide	1314-60-9	99.6	50	1	Alfa Aesar	20140528	6
+碱性硝酸铋	Bismuth nitrate oxide	10361-46-3	79	50	1	Alfa Aesar	20140922	6
+氯化钨	Tungsten chloride	13283-01-7	99	50	1	Alfa Aesar	20130612	6
+氧化镧	Lanthanum oxide	1312-81-8	99.999	25	1	Xiya Reagent	20160924	6
+碳酸铯	Cesium carbonate	534-17-8	99	250	1	Alfa Aesar	20130127	6
+氯化钼	Molybdenum chloride	10241-05-1	99.5	2	1	Alfa Aesar	20130824	6
+乙酸钡	Barium acetate	543-80-6	99	100	1	Acros organics	20141231	6
+一水合乙酸铜（II），98+%	Cupric acetate monohydrate	6046-93-1	98%	250g	1	阿法埃莎	20131110	6
+六水合氯化钴(II)，98%	Cobalt chloride hexahydrate	7791-13-1	98%	250g	1	阿法埃莎	20161126	6
+乙酸镍，四水	Nickel acetate tetrahydrate	6018-89-9	98%	250g	1	国药集团	20160415	6
+乙酸镍（II）四水合物	Nickel acetate tetrahydrate	6018-89-9	98%	100g	1	阿法埃莎	20140822	6
+硫酸铵	Ammonium sulfate	7783-20-2	99%	500g	1	现代东方	20141115	6
+六水合硝酸锌	Zinc nitrate hexahydrate	10196-18-6	99%	500g	1	阿法埃莎	20160321	6
+硝酸铁	Ferric nitrate	10421-48-4	98.50%	500g	1	现代东方	20160829	6
+六水硝酸锰（II）	Manganous nitrate hexahydrate	17141-63-8	98%	100g	1	阿法埃莎	20160713	6
+硝酸铬，九水	Chromium nitrate nonahydrate	7789-02-8	99%	500g	1	国药集团	20130907	6
+氧化铌（V）	Niobium oxide	1313-96-8	99.50%	500g	1	阿法埃莎	20140207	6
+氧化铌（V）	Niobium oxide	1313-96-8	99.00%	100g	1	阿法埃莎	20160404	6
+氧化钛(IV),催化剂载体	Titanium oxide	1317-80-2	Null	250g	1	阿法埃莎	20150712	6
+氧化锆，催化剂载体	Zirconium oxide	1314-23-4	99%	100g	1	阿法埃莎	20140812	6
+硫酸氧化钒(IV)	Vanadyl sulfate	27774-13-6	99.90%	50g	1	阿法埃莎	20140805	6
+水合草酸铌(V)	Columbium oxalate	21348-59-4	Null	25g	1	阿法埃莎	20140922	6
+硝酸锶	Cesium nitrate	7789-18-6	99.80%	50g	1	阿法埃莎	20140720	6
+L-抗坏血酸钠	Sodium ascorbate	134-03-2	99%	100g	1	阿法埃莎	20160119	6
+硅酸钠，九水	Sodium metasilicate nonahydrate	13517-24-3	Null	500g	1	国药集团	20140530	6
+丙醛	Propionaldehyde	123-38-6	97	500	1	alfa	20150128	7
+丙酮	Acetone	67-64-1	AR	0	1	国药	20161012	7
+乙酰丙酮	2,4-Pentanedione	123-54-6	Null	0	1	现代东方	20160308	7
+羟基丙酮	Hydroxyacetone	116-09-6	95	0	2	alfa	20160905	7
+甲酸	Formic acid	64-18-6	AR	0	1	现代 东方	20160712	7
+甲酸	Formic acid	64-18-6	99	0	1	百灵威	20140712	7
+丙烯酸	Acrylic acid	79-10-7	99.5	0	1	alfa	20140106	7
+油酸	Oleic acid	112-80-1	90	0	2	alfa	20130709	7
+1,4-丁内酯	gamma-Butyrolactone	96-48-0	AR	0	1	西亚试剂	20130304	7
+乙酸乙酯	Ethyl acetate	141-78-6	AR	0	1	现代东方	20150409	7
+乙酸乙酯	Ethyl acetate	141-78-6	99.8	0	1	百灵威	20160813	7
+磷酸三甲酯	Trimethyl phosphate	512-56-1	99	0	1	alfa	20141205	7
+酞酸丁酯	Butyl benzoate	136-60-7	AR	0	1	永大试剂	20130614	7
+正硅酸乙酯	Tetraethyl orthosilicate	78-10-4	AR	0	1	北京化工厂	20150109	7
+乳酸甲酯	Methyl lactate	547-64-8	98	25	1	梯希爱	20130812	7
+硬脂酸甲酯	Methyl stearate	112-61-8	99	5	1	alfa	20140129	7
+油酸甲酯	Methyl Oleate	112-62-9	96	25	1	alfa	20140325	7
+亚油酸	Linoleic acid	60-33-3	97	25	1	alfa	20150919	7
+乳酸	Lactic acid	50-21-5	85-90	2000	1	alfa	20150602	7
+无水甲醇	Methanol	67-56-1	AR	500ml	1	北京化工厂	20170725	8
+甲醇	Methanol	67-56-1	AR	500ml	1	北京化工厂	20170322	8
+无水乙醇	Ethanol	64-17-5	AR	500ml	1	北京化工厂	20170801	8
+乙二醇	Ethylene glycol	107-21-1	AR	500ml	1	北京化工厂	20170110	8
+正丙醇	1-Propanol	71-23-8	AR	500ml	3	北京现代东方	20150403	8
+异丙醇	Isopropanol	67-63-0	AR	500ml	2	北京化工厂	20170716	8
+丙三醇	Glycerol	56-81-5	AR	500ml	2	Alfa Aesar	20150920	8
+丙三醇	Glycerol	56-81-5	20%	500ml	1	Alfa Aesar	20161003	8
+正丁醇	1-Butanol	71-36-3	AR	500ml	1	北京现代东方	20160705	8
+1,4-丁二醇	1,4-Butanediol	110-63-4	AR	500ml	1	国药	20150201	8
+正戊醇	1-Pentanol	71-41-0	AR	500ml	1	北京现代东方	20150417	8
+一缩二乙二醇	Diethylene glycol	111-46-6	AR	500ml	1	国药	20140119	8
+正己醇	1-Hexanol	111-27-3	AR	500ml	1	北京现代东方	20120516	8
+1,5-戊二醇	1,5-Pentanediol	111-29-5	98%	25	1	北京百灵威科技有限公司	20130707	8
+1,2-戊二醇	1,2-Pentanediol	5343-92-0	98%	25ml	1	梯希爱化成工业有限公司	20160123	8
+糠醇	Furfuryl alcohol	98-00-0	98	100	1	百灵威	20140705	8
+四氢糠醇	Tetrahydrofurfuryl alcohol	97-99-4	Null	250	1	百灵威	20151116	8
+苯甲醇	Benzyl alcohol	100-51-6	99	1000	1	alfa Aesar	20140911	8
+2-甲基呋喃	2-Methylfuran	534-22-5	99	25	1	百灵威	20160227	8
+2-糠醛	Furfural	98-01-1	Null	0	1	Accu Standard	20150512	8
+丁酸甲酯	Methyl butyrate	623-42-7	99	25	1	梯希爱化成工业有限公司	20160412	8
+四氢糠醇	Tetrahydrofurfuryl alcohol	97-99-4	99	25	1	damas-beta	20160224	8
+顺丁烯二酸	Maleic acid	110-16-7	CP	500g	1	SCR	20150908	9
+反丁烯二酸	Fumaric acid	110-17-8	CP	100g	1	SCR	20150228	9
+琥珀酸	Succinic acid	110-15-6	99%	250g	1	J&K	20150228	9
+顺丁烯二酸酐	Maleic anhydride	108-31-6	AR	500g	1	SCR	20160117	9
+酒石酸	Tartaric acid	526-83-0	AR	150g	1	京试	20161027	9
+柠檬酸	Citric acid	77-92-9	99.50%	500g	1	京试	20160528	9
+乙二胺四乙酸	Ethylenediaminetetraacetic acid	60-00-4	AR	250g	1	SCR	20130202	9
+L-苹果酸	L-(-)-Malic Acid	97-67-6	BR	5g	1	SCR	20150729	9
+马来酸	Maleic acid	110-16-7	99%	100g	1	J&K	20151225	9
+四水合钼酸铵	Ammonium molybdate tetrahydrate	12054-85-2	99%	50g	2	Alfa	20140915	9
+柠檬酸	Citric acid	77-92-9	99.50%	100g	1	Alfa	20161020	9
+DL-苹果酸	DL-Malic acid	617-48-1	BR	100g	1	沃凯	20141201	9
+六水硝酸锰	Manganous nitrate hexahydrate	17141-63-8	98%	25g	1	Alfa Aesar	20130124	10
+六水氯化铝	Aluminium chloride hexahydrate	7784-13-6	99%	250g	1	Alfa Aesar	20140415	10
+氧化钴	Cobalt oxide	1307-96-6	AR	100g	1	Aladdin	20130916	10
+六水硝酸镧	Lanthanum nitrate hexahydrate	10277-43-7	99.90%	100g	1	Strem	20140606	10
+十二烷基苯磺酸钠	Sodium dodecylbenzenesulphonate	25155-30-0	79.50%	25g	1	TCI	20161002	10
+十二钨磷酸钠水合物	Sodium phosphotungstate	51312-42-6	Null	25g	1	Alfa Aesar	20150116	10
+十二胺	Dodecylamine	124-22-1	CP	250ml	1	国药	20160203	10
+单硬脂酸甘油酯	Glyceryl monostearate	31566-31-1	Null	250g	1	Alfa Aesar	20130917	10
+p-1,2,3-三段共聚物	p123	-1	Null	100g	1	Aldrich	20150610	10
+尿素	Urea	57-13-6	Null	500g	1	西胧科学	20161203	10
+四乙氧基硅烷	Tetraethyl orthosilicate	78-10-4	98%			Alfa Aesar	20140922	10
+1-辛基-3-甲基咪唑高氯酸盐	1-octyl-3-Methylimidazolium perchlorate	1400758-87-3	98%	100g	1	中科院兰州化学物理研究所	20140418	10
+三乙基铵硝酸盐	Triethylammonium nitrate	27096-31-7	98%	100g	1	中科院兰州化学物理研究所	20140311	10
+1,3,5-均苯三酸	1,3,5-Tribenzoic acid	554-95-0	98%	50g	2	伊诺凯	20130502	10
+4,4-联吡啶	4,4'-Bipyridine	553-26-4	99%	5g	1	北京百灵威	20130526	10
+2-氨基对苯二甲酸	2-Aminoterephthalic acid	10312-55-7	99%	5g	1	北京百灵威	20141003	10
+2,5-二羟基对苯二甲酸	2,5-Dihydroxyterephthalic acid	610-92-4	98%	2.5g	1	MACKLIN	20131105	10
+2-硝基咪唑	2-Nitroimidazole	527-73-1	98%	1g	1	伊诺凯	20130626	10
+2-甲基咪唑	2-Methylimidazole	693-98-1	99%	100g	1	Acros organics	20130621	10
+乙酰丙酮铁	Ferric acetylacetonate	14024-18-1	99%	25g	1	Acros organics	20140315	10
+乙酰丙酮镍	Nickel acetylacetonate	3264-82-2	95%	5g	2	Alfa Aesar	20141231	10
+硫酸铵	Ammonium sulfate	7783-20-2	99	500	1	京纯试剂	20111113	12
+磷酸氢铵	Diammonium hydrogenphosphate	7783-28-0	98	250	1	Alfa Aesar	20161121	12
+氯化钡	Barium chloride	10361-37-2	99.5	500	1	京纯试剂	20150518	12
+碳酸钙	Calcium carbonate	471-34-1	分析纯	500	1	北京现代东方精细化学品有限公司	20130520	12
+氧化钙	Calcium oxide	1305-78-8	98	500	1	京纯试剂	20131020	12
+磷酸二氢钾	Potassium dihydrogen phosphate	7778-77-0	99.5	500	1	京纯试剂	20141114	12
+溴化钾	Potassium bromide	7758-02-3	99	250	1	Alfa Aesar	20151021	12
+硝酸钾	Potassium nitrate	7757-79-1	99	100	1	Alfa Aesar	20141103	12
+硼氢化钠	Sodium borohydride	16940-66-2	98	100	1	Alfa Aesar	20140322	12
+无水硫酸钠	Sodium sulfate	7757-82-6	分析纯	500	2	北京化工厂	20151023	12
+磷酸氢二钠	Dibasic sodium phosphate	7558-79-4	99	500	1	京纯试剂	20131023	12
+二水合柠檬酸三钠	Trisodium citrate dihydrate	6132-04-3	分析纯	500	1	西陇化工股份有限公司	20160114	12
+低亚硫酸钠	Sodium dithionite	7775-14-6	分析纯	500	1	国药集团化学试剂有限公司	20141018	12
+硫酸钡	Barium sulfate	7727-43-7	纳米级	500	1	Xiya Reagent	20160111	12
+硝酸钙	Calcium nitrate	10124-37-5	99	500	1	京纯试剂	20121216	12
+硫酸铵	Ammonium sulfate	7783-20-2	分析纯	500	1	北京化工厂	20150905	12
+硫酸钡	Barium sulfate	7727-43-7	99	500	1	京纯试剂	20130825	12
+无水氯化钙	Calcium chloride	10043-52-4	分析纯	500	1	北京现代东方精细化学品有限公司	20120302	12
+重铬酸钾	Potassium dichromate	7778-50-9	分析纯	500	1	国药集团化学试剂有限公司	20150415	12
+磷酸二氢钠	Sodium dihydrogen phosphate	7558-80-7	Null	250	1	Alfa Aesar	20160809	12
+氢氧化钠	Sodium hydroxide	1310-73-2	分析纯	500	1	北京化工厂	20131231	12
+溴化钠	Sodium bromide	7647-15-6	分析纯	500	1	国药集团化学试剂有限公司	20140512	12
+无水碳酸钠	Sodium carbonate	497-19-8	分析纯	500	1	京纯试剂	20131109	12
+硬脂酸钠	Sodium stearate	822-16-2	Null	250	1	Alfa Aesar	20131011	12
+无水硫酸钠	Sodium sulfate	7757-82-6	分析纯	500	1	北京化工厂	20150115	12
+低亚硫酸钠	Sodium dithionite	7775-14-6	90	500	1	国药集团化学试剂有限公司	20131007	12
+四氯合钯酸钠	Sodium tetrachloropalladate	13820-53-6	36.4%Pd	5g	1	ACROS ORGANICS	20140308	抽屉
+乙酸钯（Ⅱ）三聚体	Palladium acetate trimer	53189-26-7	45.9-48.4Pd	1g	1	alfa	20161005	抽屉
+氯化钯（Ⅱ）	Palladium chloride	7647-10-1	59.5%Pd	2g	3	alfa	20140101	抽屉
+乙酰丙酮钯	Palladium acetylacetonate	14024-61-4	34.7%Pd	1g	1	alfa	20150517	抽屉
+四氯化铂	Platinum tetrachloride	13454-96-1	99	250mg	1	ACROS ORGANICS	20150211	抽屉
+四氨合硝酸铂	Platinum tetraamine dinitrate	20634-12-2	50%	250mg	1	麦克林	20140727	抽屉
+四氨合硝酸铂	Platinum tetraamine dinitrate	20634-12-2	50%	0	1	aladdin	20130914	抽屉
+氯化铑（Ⅲ）水合物	Rhodium trichloride trihydrate	13569-65-8	Ru38%最低	2g	1	alfa	20140522	抽屉
+RuCl3Xh2O	Rhodium trichloride hydrate	20765-98-4	99.99%	2g	1	ALFA	20160322	抽屉
+四正丁基三溴化铵	Tetrabutylammonium tribromide	38932-80-8	98%	25g	1	alfa	20130624	抽屉
+(二-正-十二烷基）二甲基溴化铵	Didodecyldimethylammonium bromide	3282-73-3	99%	2g	1	alfa	20130531	抽屉
+硝酸银	Silver nitrate	7761-88-8	Null	100g	1	北京化工厂	20090526	抽屉
+水合六氯铑酸钠	Sodium hexachlororhodate dihydrate	14972-02-2	Null	250mg	1	STREM	20150327	抽屉
+二水乙酰丙酮钴	Cobalt acetylacetonate dihydrate	123334-29-2	99	25	1	maryer	20140714	抽屉
+二氧化铈	Cerium oxide	1306-38-3	<25nm	5	1	alorich	20141218	抽屉
+氯化锡水合物	Tin tetrachloride dihydrate	32605-66-6	试剂级	10	1	alfa	20150317	抽屉
+3-甲基-2-丁烯-1-醇	3-Methyl-2-butene-1-ol	556-82-1	>98%	25 mL	2	TGI	0	冰箱
+肉桂醛	Cinnamaldehyde	104-55-2	0.95	100 mL	6	国药沪试	0	冰箱
+3-甲基丁烯醛	3-Methyl-2-butenaldehyde	107-86-8	0.97	100 mL	1	Accela	0	冰箱
+3-甲基-3-丁烯-1-醇	3-Methyl-3-butene-1-ol	763-32-6	0.97	100 mL	1	Alfa	0	冰箱
+3-苯基丙醛	3-Phenyl-1-propanal	104-53-0	0.95	50 g	1	Alfa	0	冰箱
+1-己烯	1-Hexene	592-41-6	0.98	100 mL	1	Alfa	0	冰箱
+环辛烯	Cyclooctene	931-88-4	>95%	25 mL	1	TGI	0	冰箱
+1-丙醇	1-Propanol	71-23-8	>99.5%	25 mL	1	TGI	0	冰箱
+异戊醛	Isovaleraldehyde	590-86-3	0.98	25 mL	1	TGI	0	冰箱
+3-苯基-1-丙醛	3-Phenyl-1-propanal	104-53-0	>98%	25 mL	1	TGI	0	冰箱
+反-2-戊烯醛	trans-2-Pentenal	1576-87-0	0.96	30 mL	1	百灵威	0	冰箱
+环己烯	Cyclohexene	110-83-8	0.99	100 mL	1	Alfa	0	冰箱
+丙醛	Propionaldehyde	123-38-6	99+%	100 mL	1	ACROS	0	冰箱
+丙烯酸甲酯	Methyl acrylate	96-33-3	>99%	25 mL	1	TGI	0	冰箱
+丙烯酸	Acrylic acid	79-10-7	>99%	25 g,250 mL	1	TGI,ACROS	0	冰箱
+丁二酸	Succinic acid	110-15-6	>99%	5 g	1	沃凯	0	冰箱
+硬脂酸甲酯	Methyl stearate	112-61-8	0.95	100 g	1	Aladdin	0	冰箱
+1-甲基咪唑	1-Methylimidazole	616-47-7	0.99	100 g	2	Alfa	0	冰箱
+丙酸	Propionic acid	79-09-4	0.99	100 g	1	Alfa	0	冰箱
+油酸甲酯	Methyl Oleate	112-62-9	0.6	100 mL	1	Aladdin	0	冰箱
+氯化-1-丁烯-3-甲基咪唑	1-Butyl-3-methylimidazolium chloride	79917-90-1	0.99	100 g	1	上海成捷	0	冰箱
+三棕榈酸甘油酯	Tripalmitin	555-44-2	0.98	1 g	1	Alfa	0	冰箱
+磷钨酸	Phosphotungstic acid	12067-99-1	Null	25 g	1	ACROS	0	冰箱
+2,3-戊烷二酮	2,?3-?Pentanedione	600-14-6	0.97	25 g	1	Alfa	0	冰箱
+2-羟基四氢呋喃	2-Hydroxytetrahydrofuran	5371-52-8	0.95	0.25 g	1	韶远	0	冰箱
+乳酸	Lactic acid	50-21-5	0.85	25 g	1	百灵威	0	冰箱
+3-氯丙基三乙氧基硅烷	3-Chloropropropyltriethoxysilane	5089-70-3	>97%	25 mL	1	TGI	0	冰箱
+γ-丁内酯	gamma-Butyrolactone	96-48-0	0.99	25 mL	1	百灵威	0	冰箱
+冰乙酸	Acetic acid	64-19-7	0.995	5 mL	1	西亚	0	冰箱
+乙醛	Acetaldehyde	75-07-0	0.4	5 mL	2	西亚	0	冰箱
+乙酸	Acetic acid	64-19-7	色标	5 mL	1	西亚	0	冰箱
+2,5(H)-呋喃酮	2,5-Dihydrofuranone	497-23-4	0.96	5 g	3	百灵威	0	冰箱
+2,5(H)-呋喃酮	2,5-Dihydrofuranone	497-23-4	0.97	1 g	1	百灵威	0	冰箱
+丙烯醛	Acrylaldehyde	107-02-8	0.995	5 mL	1	西亚	0	冰箱
+3-氨基苯甲腈	3-Aminobenzonitrile	2237-30-1	0.97	5 g	1	Accela	0	冰箱
+乙酸乙烯酯	Vinyl acetate	108-05-4	色标	 5 mL	1	天津津科	0	冰箱
+异戊醛	Isovaleraldehyde	590-86-3	色标	5 mL	1	国药	0	冰箱
+亚麻酸甲酯	Methyl linolenate	301-00-8	0.8	5 mL	1	Aladdin	0	冰箱
+亚油酸甲酯	Methyl linoleate	112-63-0	Null	1 g	1	Alfa	0	冰箱
+甘油三月桂酸酯	Trilaurin	538-24-9	0.98	5 g	1	Aladdin	0	冰箱
+DL-乳酸	DL-Lactic acid	50-21-5	0.85	25 g	1	ACROS	0	冰箱
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								

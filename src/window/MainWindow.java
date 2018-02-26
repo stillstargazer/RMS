@@ -55,7 +55,6 @@ public class MainWindow extends JFrame
 	public MainWindow(ReagentList rl)
 	{
 		super("试剂管理系统");
-		setResizable(false);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setSize(1000, 600);
 		this.setBounds(100, 100, 1000, 600);
@@ -124,6 +123,7 @@ public class MainWindow extends JFrame
 		reagentTableCellRender.setHorizontalAlignment(JLabel.CENTER);
 		reagentTable.setDefaultRenderer(Number.class, reagentTableCellRender);
 		reagentTable.getColumn("数量").setCellRenderer(reagentTableCellRender);
+		reagentTable.getColumn("柜号").setCellRenderer(reagentTableCellRender);
 		
 		// 加入JScrollPane
 		JScrollPane reagentPane = new JScrollPane(reagentTable);
@@ -139,8 +139,8 @@ public class MainWindow extends JFrame
 		// 设置列宽
 		TableColumnModel reagentTableColumn = reagentTable.getColumnModel();
 		reagentTableColumn.getColumn(0).setPreferredWidth(300);
-		reagentTableColumn.getColumn(1).setPreferredWidth(300);
-		reagentTableColumn.getColumn(2).setPreferredWidth(200);
+		reagentTableColumn.getColumn(1).setPreferredWidth(320);
+		reagentTableColumn.getColumn(2).setPreferredWidth(180);
 		reagentTableColumn.getColumn(3).setPreferredWidth(100);
 		reagentTableColumn.getColumn(4).setPreferredWidth(100);
 		
